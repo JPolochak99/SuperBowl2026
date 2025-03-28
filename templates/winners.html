@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Bowl Boxes</title>
+    <link rel="stylesheet" href="static/winnerPageStyles.css">
+</head>
+<body>
+    <header>
+        <h1>SuperBowl Box Winners</h1>
+        <nav>
+            <a href="{{ url_for('index')}}" class="button">Back to Boxes</a>
+            <a href="{{ url_for('how_to_win') }}" class="button">How To Win</a>
+        </nav>
+
+        <div class="image-container">
+            <img src="/static/images/lix.png" alt="SuperBowl 59" class="background-image">
+        </div>
+    </header>
+
+    <div class="winnerContainer">
+        <h1 id="label">1st Quarter Winners</h1>
+        <ol>
+            <li>
+                {% if q1WinnerBoxNormal == 'TBD' %}
+                <span class="box-number">TDB</span>
+                {% else %}
+                <span class="box-number">Box #{{ q1WinnerBoxNormal.split()[-1] }} {{ q1WinnerBoxNormal.split()[:-1] | join(' ') }}:</span> 
+                {% endif %}
+                Score of game at the end of the 1st quarter = <span class="prize">$700</span>
+            </li>
+            <li>
+                
+                <span class="box-number">Box #{{ q1WinnerBoxAdded.split()[-1] }} {{ q1WinnerBoxAdded.split()[:-1] | join(' ') }}:</span> Add 1 point to each team's 1st quarter score = <span class="prize">$450</span>
+            </li>
+
+            <h1 id="label">2nd Quarter Winners</h1>
+
+            <li>
+                 <span class="box-number">Box #{{ q2WinnerBoxNormal.split()[-1] }} {{ q2WinnerBoxNormal.split()[:-1] | join(' ') }}:</span> Score of game at half time = <span class="prize">$1000</span>
+            </li>
+            <li>
+                 <span class="box-number">Box #{{ q2WinnerBoxAdded.split()[-1] }} {{ q2WinnerBoxAdded.split()[:-1] | join(' ') }}:</span> Add 1 point to each team's half time score = <span class="prize">$450</span>
+            </li>
+            <li>
+                 <span class="box-number">Box #{{ q2WinnerBoxBelow.split()[-1] }} {{ q2WinnerBoxBelow.split()[:-1] | join(' ') }}:</span> The box below the real half time scores = <span class="prize">$450</span>
+            </li>
+            <li>
+                 <span class="box-number">Box #{{ q2WinnerBoxAbove.split()[-1] }} {{ q2WinnerBoxAbove.split()[:-1] | join(' ') }}:</span> The box above the real half time scores = <span class="prize">$450</span>
+            </li>
+
+            <h1 id="label">3rd Quarter Winners</h1>
+            <li>
+                 <span class="box-number">Box #{{ q3WinnerBoxNormal.split()[-1] }} {{ q3WinnerBoxNormal.split()[:-1] | join(' ') }}:</span> Score of the game at the end of the 3rd quarter = <span class="prize">$700</span>
+            </li>
+            <li>
+                 <span class="box-number">Box #{{ q3WinnerBoxAdded.split()[-1] }} {{ q3WinnerBoxAdded.split()[:-1] | join(' ') }}:</span> Add 1 point to each team's 3rd quarter score = <span class="prize">$450</span>
+            </li>
+
+            <h1 id="label">4th Quarter Winners</h1>
+
+            <li>
+                 <span class="box-number">Box #{{ q4WinnerBoxNormal.split()[-1] }} {{ q4WinnerBoxNormal.split()[:-1] | join(' ') }}:</span> Final score at the end of the game = <span class="prize">$3,000</span>
+            </li>
+            <li>
+                 <span class="box-number">Box #{{ q4WinnerBoxAbove.split()[-1] }} {{ q4WinnerBoxAbove.split()[:-1] | join(' ') }}:</span> The box above the final score = <span class="prize">$450</span>
+            </li>
+            <li>
+                 <span class="box-number">Box #{{ q4WinnerBoxBelow.split()[-1] }} {{ q4WinnerBoxBelow.split()[:-1] | join(' ') }}:</span> The box below the final score = <span class="prize">$450</span>
+            </li>
+            <li>
+                 <span class="box-number">Box #{{ q4WinnerBoxAdded.split()[-1] }} {{ q4WinnerBoxAdded.split()[:-1] | join(' ') }}:</span> Add 1 point to each team's final score = <span class="prize">$450</span>
+            </li>
+            <li>
+                 <span class="box-number">Box #{{ q4WinnerBoxCombinedScores.split()[-1] }} {{ q4WinnerBoxCombinedScores.split()[:-1] | join(' ') }}:</span> Add up the final score = <span class="prize">$500</span>
+            </li>
+            <li>
+                 <span class="box-number">Box #{{ q4WinnerBoxPlusTouchdown.split()[-1] }} {{ q4WinnerBoxPlusTouchdown.split()[:-1] | join(' ') }}:</span> Add a touchdown to each team's final score = <span class="prize">$500</span>
+            </li>
+        </ol>
+    </div>
+
+<!--
+    <script>
+     setTimeout(function(){
+          alert("Congratulations Knapp and All Winners! ");} ,3000
+     )
+     </script>
+    -->
+     </body>
+</html>

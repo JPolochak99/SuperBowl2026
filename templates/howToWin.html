@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Bowl Boxes</title>
+    <link rel="stylesheet" href="/static/howtostyles.css">
+</head>
+<body>
+    <header>
+        <h1>SuperBowl Boxes</h1>
+        <nav>
+            <a href="{{ url_for('index') }}" class="button">Back to Boxes</a>
+            <a href="{{ url_for('winners') }}" class="button">Winners</a>
+        </nav>
+
+        <div class="image-container">
+            <img src="/static/images/lix.png" alt="SuperBowl 59" class="background-image">
+        </div>
+    </header>
+
+   
+
+<div class="waysToWin">
+    <h1 id="label">Ways To Win</h1>
+    <ol>
+        <li>
+            Score of game at the end of the 1st quarter = $700
+        </li>
+        <li>
+            Add 1 point to each team's 1st quarter score: (Ex: A score of 7-0 now becomes 8-1) = $450
+        </li>
+        <li>
+            Score of game at half time = $1,000
+        </li>
+        <li>
+            Add 1 point to each team's half time score = $450
+        </li>
+        <li>
+            The box below the real half time scores = $450 (if the winning box happens to be in the bottom row the prize is paid to the box at the top of the same column)
+        </li>
+        <li>
+            The box above the real half time scores = $450 (if the winning box happens to be in the top row the prize is paid to the box at the bottom of the same column)
+        </li>
+        <li>
+            Score of the game at the end of the 3rd quarter = $700
+        </li>
+        <li>
+            Add 1 point to each team's 3rd quarter score = $450
+        </li>
+        <li>
+            Final score at the end of the game. No 4th quarter prize if the game is tied and goes into overtime. <u>PRIZE IS ONLY GIVEN TO THE FINAL SCORE</u> = $3,000
+        </li>
+        <li>
+            The box above the final score = $450
+        </li>
+        <li>
+            The box below the final score = $450
+        </li>
+        <li>
+            Add 1 point to each team's final score = $450
+        </li>
+        <li>
+            Add up the final score (Ex: If the final score is 28-14, 28+14=42. The first number is the AFC, second number is NFC) = $500
+        </li>
+        <li>
+            Add a touchdown to each teams final score (Ex: 28-14 now becomes 34-20. Just add 6 point to each team) = $500
+        </li>
+    </ol>
+</div>
+</body>
+</html>
+

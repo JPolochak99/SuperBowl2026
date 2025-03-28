@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <title>Excel Table</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">SuperBowl Boxes</h1>
+        <nav>
+            <a href="{{ url_for('how_to_win') }}" class="button">How To Win</a>
+            <a href="{{ url_for('winners') }}" class="button">Winners</a>
+        </nav>
+        <div class="sbNumber-container">
+            <img src="/static/images/lix.png" alt="SuperBowl 59" class="sbNumber-image">
+        </div>
+    </header>
+
+    <div class="qb-container">
+        <img src="/static/images/qb.png" alt="Background Image" class="background-pics">
+    </div>
+    <div class="rb-container">
+        <img src="/static/images/rb.png" alt="Background Image" class="background-pics">
+    </div>
+
+    <div class="table-container">
+        <h1 id="AFC">AFC</h1>
+        <h1>NFC</h1>
+        {{ html_content|safe }}
+    </div>
+
+    <br>
+
+    <footer>
+        <div class="search-container">
+            <h2>Search For Your Box</h2>
+            <input type="text" id="searchBox" placeholder="Enter Full Name...">
+            <button type="submit" id="searchButton">Search</button>
+        </div>
+    </footer>
+</body>
+</html>
